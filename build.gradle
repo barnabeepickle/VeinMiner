@@ -1,193 +1,78 @@
-
-buildscript {
-    repositories {
-        jcenter()
-        maven {
-            name = "forge"
-            url = "http://files.minecraftforge.net/maven"
-        }
-        maven {
-            name = "sonatype"
-            url = "https://oss.sonatype.org/content/repositories/snapshots/"
-        }
-    }
-    dependencies {
-        classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
-    }
-}
-
 plugins {
-    id 'com.matthewprenger.cursegradle' version '1.0.9'
-    id 'org.ajoberstar.grgit' version '1.3.2'
+	id 'fabric-loom' version "${loom_version}"
+	id 'maven-publish'
 }
 
-apply plugin: 'net.minecraftforge.gradle.forge'
-apply plugin: 'maven'
-apply plugin: "org.ajoberstar.grgit"
-apply plugin: "com.matthewprenger.cursegradle"
+version = project.mod_version
+group = project.maven_group
 
-ext.git = grgit.open(file('.'))
-
-ext {
-    configFile = file "build.properties"
-
-    revision = git.head().abbreviatedId
-    depth = git.log().size()
+base {
+	archivesName = project.archives_base_name
 }
 
-
-configFile.withReader {
-    def prop = new Properties()
-    prop.load(it)
-    //noinspection GrUnresolvedAccess
-    ext.config = new ConfigSlurper().parse prop
+repositories {
+	// Add repositories to retrieve artifacts from in here.
+	// You should only use this when depending on other mods because
+	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
+	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
+	// for more information about repositories.
 }
 
-group= "portablejim.veinminer"
-version = config.mod_version
-archivesBaseName = "VeinMiner"
+dependencies {
+	// To change the versions see the gradle.properties file
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-minecraft {
-    version = config.minecraft_version + "-" + config.forge_version
-    mappings = "snapshot_20170708"
-    runDir = "run"
+	// Fabric API. This is technically optional, but you probably want it anyway.
+	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+	
 }
-
-String buildNumber = "unknown"
-if(System.getenv("BUILD_NUMBER") != null) {
-    buildNumber = System.getenv("BUILD_NUMBER")
-}
-
-version = "${config.minecraft_version}-${config.mod_version}.${ext.depth}+${ext.revision}"
 
 processResources {
-    from(sourceSets.main.resources.srcDirs) {
-        include 'mcmod.info'
-        include 'version.properties'
+	inputs.property "version", project.version
 
-        // replace version and mcversion
-        expand 'version':project.config.mod_version, 'mcversion':project.config.minecraft_version, 'gitrev': revision,  'revnumber': depth
-    }
-
-    from(sourceSets.main.resources.srcDirs) {
-        exclude 'mcmod.info'
-        exclude 'version.properties'
-    }
+	filesMatching("fabric.mod.json") {
+		expand "version": inputs.properties.version
+	}
 }
 
-ext.sharedmanifest = manifest {
-        //attributes 'FMLCorePlugin': 'portablejim.veinminer.asm.VeinMinerCorePlugin'
-        //attributes 'FMLCorePluginContainsFMLMod': 'true'
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 8
+}
+
+java {
+	// Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task
+	// if it is present.
+	// If you remove this line, sources will not be generated.
+	withSourcesJar()
+
+	sourceCompatibility = JavaVersion.VERSION_1_8
+	targetCompatibility = JavaVersion.VERSION_1_8
 }
 
 jar {
-    manifest = project.manifest {
-        from sharedmanifest
-    }
+	inputs.property "archivesName", project.base.archivesName
+
+	from("LICENSE") {
+		rename { "${it}_${inputs.properties.archivesName}"}
+	}
 }
 
-sourceCompatibility = 6
-targetCompatibility = 6
+// configure the maven publication
+publishing {
+	publications {
+		create("mavenJava", MavenPublication) {
+			artifactId = project.archives_base_name
+			from components.java
+		}
+	}
 
-task apiJar(type: Jar) {
-    from sourceSets.main.output
-    classifier = 'api'
-    include "portablejim/veinminer/api/**"
-}
-
-task deobfJar(type: Jar) {
-    from sourceSets.main.output
-    manifest = project.manifest {
-        from sharedmanifest
-    }
-    classifier = 'dev'
-}
-
-//noinspection GrUnresolvedAccess
-task release(type: Copy) {
-    dependsOn "build"
-
-    from project.tasks.jar.archivePath
-    into "release/"
-}
-
-runClient {
-    jvmArgs "-Dfml.coreMods.load=portablejim.veinminer.asm.VeinMinerCorePlugin"
-}
-
-build.dependsOn apiJar, deobfJar
-
-artifacts {
-    archives deobfJar
-}
-
-configurations {
-    deployerJars
-}
-
-uploadArchives {
-    dependsOn 'reobf'
-
-    repositories {
-        if(project.hasProperty("pushMaven")) {
-            logger.info("Pushing to maven repo")
-
-            mavenDeployer {
-                configuration = configurations.deployerJars
-
-                repository(url: "file://localhost/home/public_html/maven.jamesmckay.id.au/htdocs/")
-
-                pom {
-                    groupId = project.group
-                    version = project.version
-                    artifactId = project.archivesBaseName
-                    packaging = 'jar'
-                    description 'VeinMiner Mod'
-                }
-            }
-        }
-    }
-}
-
-curseforge {
-    if (project.hasProperty('curseForgeApiKey')) apiKey = project.curseForgeApiKey
-    else apiKey = 0
-    //debug = true
-    project {
-        id = '67133'
-        changelog = new File('Changelog.md').getText('utf-8').split('\n-{3,8}|\n\n')[2]
-        changelogType = 'text'
-        releaseType = 'alpha' // Just a default
-        mainArtifact (jar) {
-            displayName = "VeinMiner $config.mod_version [MC$config.compatible_versions; rev $depth]"
-        }
-
-        addArtifact apiJar
-        addArtifact deobfJar
-
-        for (String newVersion : config.compatible_versions.split(",")) {
-            addGameVersion newVersion
-        }
-    }
-}
-
-task curseAlpha(dependsOn: tasks.curseforge) {}
-task curseBeta(dependsOn: tasks.curseforge) {}
-task curseRelease(dependsOn: tasks.curseforge) {}
-
-gradle.taskGraph.whenReady { taskGraph ->
-    curseforge.curseProjects.each { it.mainArtifact.displayName = "VeinMiner $config.mod_version [MC$config.compatible_versions; rev $ext.depth]" }
-    if (taskGraph.hasTask(curseAlpha)) {
-        curseforge.curseProjects.each { it.additionalArtifacts.each { it.releaseType = 'alpha' } }
-        curseforge.curseProjects.each { it.releaseType = 'alpha' }
-        curseforge.curseProjects.each { it.mainArtifact.releaseType = 'alpha' }
-    } else if (taskGraph.hasTask(curseBeta)) {
-        curseforge.curseProjects.each { it.releaseType = 'beta' }
-        curseforge.curseProjects.each { it.mainArtifact.releaseType = 'beta' }
-        curseforge.curseProjects.each { it.additionalArtifacts.each { it.releaseType = 'beta' } }
-    } else if (taskGraph.hasTask(curseRelease)) {
-        curseforge.curseProjects.each { it.releaseType = 'release' }
-        curseforge.curseProjects.each { it.mainArtifact.releaseType = 'release' }
-        curseforge.curseProjects.each { it.additionalArtifacts.each { it.releaseType = 'release' } }
-    }
+	// See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
+	repositories {
+		// Add repositories to publish to here.
+		// Notice: This block does NOT have the same function as the block in the top level.
+		// The repositories here will be used for publishing your artifact, not for
+		// retrieving dependencies.
+	}
 }

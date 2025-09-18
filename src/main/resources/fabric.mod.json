@@ -1,0 +1,36 @@
+{
+	"schemaVersion": 1,
+	"id": "veinminer",
+	"version": "${version}",
+  "name": "Vein Miner, Ore Excavator",
+  "description": "A Vein Miner/Ore Excavator mod for Minecraft Fabric.",
+  "authors": [
+    "barnabeepickle"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": "",
+    "issues": "/issues"
+  },
+
+  "license": "LGPL-3.0-only",
+	"icon": "assets/excavator/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.github.barnabeepickle.excavator.Excavator"
+    ],
+    "client" : [
+      "com.github.barnabeepickle.excavator.ExcavatorClient"
+    ]
+  },
+  "mixins": [
+    "excavator.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.14.4"
+  }
+}
