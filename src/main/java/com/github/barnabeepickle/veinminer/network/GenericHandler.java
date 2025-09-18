@@ -1,4 +1,4 @@
-package portablejim.veinminer.network;
+package com.github.barnabeepickle.veinminer.network;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayerMP;

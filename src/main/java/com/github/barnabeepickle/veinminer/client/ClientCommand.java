@@ -1,4 +1,4 @@
-package portablejim.veinminer.client;
+package com.github.barnabeepickle.veinminer.client;
 
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.command.CommandBase;

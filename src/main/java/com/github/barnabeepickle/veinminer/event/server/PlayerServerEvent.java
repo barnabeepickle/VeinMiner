@@ -22,10 +22,10 @@ import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerLoggedOutEvent;
-import portablejim.veinminer.VeinMiner;
-import portablejim.veinminer.lib.MinerLogger;
-import portablejim.veinminer.network.PacketPingClient;
-import portablejim.veinminer.server.MinerServer;
+import com.github.barnabeepickle.veinminer.VeinMiner;
+import com.github.barnabeepickle.veinminer.lib.MinerLogger;
+import com.github.barnabeepickle.veinminer.network.PacketPingClient;
+import com.github.barnabeepickle.veinminer.server.MinerServer;
 
 /**
  * Class to hold events that happen on the server.

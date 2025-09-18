@@ -15,7 +15,7 @@
  *    If not, see <http://www.gnu.org/licenses/>.
  */
 
-package portablejim.veinminermodsupport;
+package com.github.barnabeepickle.veinminermodsupport;
 
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.FMLLog;
@@ -34,10 +34,10 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.network.NetworkCheckHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.common.config.Configuration;
-import portablejim.veinminer.api.IMCMessage;
-import portablejim.veinminer.api.Permission;
-import portablejim.veinminer.api.VeinminerHarvestFailedCheck;
-import portablejim.veinminer.api.VeinminerPostUseTool;
+import com.github.barnabeepickle.veinminer.api.IMCMessage;
+import com.github.barnabeepickle.veinminer.api.Permission;
+import com.github.barnabeepickle.veinminer.api.VeinminerHarvestFailedCheck;
+import com.github.barnabeepickle.veinminer.api.VeinminerPostUseTool;
 
 import java.io.File;
 import java.lang.reflect.InvocationTargetException;

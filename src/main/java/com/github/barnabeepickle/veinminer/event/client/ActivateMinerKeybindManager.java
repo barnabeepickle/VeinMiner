@@ -15,7 +15,7 @@
  *    If not, see <http://www.gnu.org/licenses/>.
  */
 
-package portablejim.veinminer.event.client;
+package com.github.barnabeepickle.veinminer.event.client;
 
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.FMLCommonHandler;
@@ -23,9 +23,9 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.InputEvent;
 import net.minecraft.client.settings.KeyBinding;
 import org.lwjgl.input.Keyboard;
-import portablejim.veinminer.VeinMiner;
-import portablejim.veinminer.network.PacketMinerActivate;
-import portablejim.veinminer.util.PreferredMode;
+import com.github.barnabeepickle.veinminer.VeinMiner;
+import com.github.barnabeepickle.veinminer.network.PacketMinerActivate;
+import com.github.barnabeepickle.veinminer.util.PreferredMode;
 
 import java.util.HashMap;
 import java.util.Map;

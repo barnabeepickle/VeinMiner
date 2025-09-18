@@ -15,7 +15,7 @@
  *    If not, see <http://www.gnu.org/licenses/>.
  */
 
-package portablejim.veinminer.server;
+package com.github.barnabeepickle.veinminer.server;
 
 import com.google.common.base.Joiner;
 import net.minecraft.server.MinecraftServer;
@@ -30,9 +30,9 @@ import net.minecraft.command.ICommandSender;
 import net.minecraft.command.WrongUsageException;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.server.dedicated.DedicatedServer;
-import portablejim.veinminer.configuration.ConfigurationSettings;
-import portablejim.veinminer.util.BlockID;
-import portablejim.veinminer.util.PlayerStatus;
+import com.github.barnabeepickle.veinminer.configuration.ConfigurationSettings;
+import com.github.barnabeepickle.veinminer.util.BlockID;
+import com.github.barnabeepickle.veinminer.util.PlayerStatus;
 
 import java.util.Arrays;
 import java.util.List;

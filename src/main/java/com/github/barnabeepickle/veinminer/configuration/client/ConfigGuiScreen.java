@@ -15,7 +15,7 @@
  *    If not, see <http://www.gnu.org/licenses/>.
  */
 
-package portablejim.veinminer.configuration.client;
+package com.github.barnabeepickle.veinminer.configuration.client;
 
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.client.FMLClientHandler;
@@ -23,13 +23,13 @@ import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.resources.I18n;
-import portablejim.veinminer.VeinMiner;
-import portablejim.veinminer.configuration.ConfigurationSettings;
-import portablejim.veinminer.configuration.client.elements.GuiElementSliderLog;
-import portablejim.veinminer.configuration.client.elements.GuiElementSlotToolTypeList;
-import portablejim.veinminer.configuration.client.elements.IGuiElementValuePersist;
-import portablejim.veinminer.network.PacketClientPresent;
-import portablejim.veinminer.util.PreferredMode;
+import com.github.barnabeepickle.veinminer.VeinMiner;
+import com.github.barnabeepickle.veinminer.configuration.ConfigurationSettings;
+import com.github.barnabeepickle.veinminer.configuration.client.elements.GuiElementSliderLog;
+import com.github.barnabeepickle.veinminer.configuration.client.elements.GuiElementSlotToolTypeList;
+import com.github.barnabeepickle.veinminer.configuration.client.elements.IGuiElementValuePersist;
+import com.github.barnabeepickle.veinminer.network.PacketClientPresent;
+import com.github.barnabeepickle.veinminer.util.PreferredMode;
 
 import java.util.ArrayList;
 import java.util.Collections;

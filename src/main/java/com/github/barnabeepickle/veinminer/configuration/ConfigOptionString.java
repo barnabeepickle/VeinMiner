@@ -15,7 +15,7 @@
  *    If not, see <http://www.gnu.org/licenses/>.
  */
 
-package portablejim.veinminer.configuration;
+package com.github.barnabeepickle.veinminer.configuration;
 
 /**
  * Simple class to gather information on a config option into one class.

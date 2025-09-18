@@ -15,7 +15,7 @@
  *    If not, see <http://www.gnu.org/licenses/>.
  */
 
-package portablejim.veinminer.api;
+package com.github.barnabeepickle.veinminer.api;
 
 import net.minecraftforge.fml.common.eventhandler.Event;
 import net.minecraft.entity.player.EntityPlayerMP;

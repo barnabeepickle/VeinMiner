@@ -1,4 +1,4 @@
-package portablejim.veinminer.configuration.client;
+package com.github.barnabeepickle.veinminer.configuration.client;
 
 /**
  * Simple class to help organise data for the man GUI config screen.

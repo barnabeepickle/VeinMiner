@@ -15,7 +15,7 @@
  *    If not, see <http://www.gnu.org/licenses/>.
  */
 
-package portablejim.veinminer.api;
+package com.github.barnabeepickle.veinminer.api;
 
 /**
  * Permission levels used with events. Deny requests have priority over allow requests. The 4 events are:

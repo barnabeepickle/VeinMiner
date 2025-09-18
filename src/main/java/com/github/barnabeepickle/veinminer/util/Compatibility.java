@@ -1,7 +1,7 @@
-package portablejim.veinminer.util;
+package com.github.barnabeepickle.veinminer.util;
 
 import net.minecraftforge.event.world.BlockEvent;
-import portablejim.veinminer.api.Point;
+import com.github.barnabeepickle.veinminer.api.Point;
 
 /**
  * Created by james on 5/06/16.

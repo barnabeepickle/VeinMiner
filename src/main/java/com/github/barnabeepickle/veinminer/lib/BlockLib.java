@@ -15,9 +15,9 @@
  *    If not, see <http://www.gnu.org/licenses/>.
  */
 
-package portablejim.veinminer.lib;
+package com.github.barnabeepickle.veinminer.lib;
 
-import portablejim.veinminer.util.BlockID;
+import com.github.barnabeepickle.veinminer.util.BlockID;
 
 /**
  * Provides extra functions dealing with blocks.

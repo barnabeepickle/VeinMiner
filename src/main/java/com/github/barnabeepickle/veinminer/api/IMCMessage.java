@@ -1,4 +1,4 @@
-package portablejim.veinminer.api;
+package com.github.barnabeepickle.veinminer.api;
 
 import net.minecraftforge.fml.common.event.FMLInterModComms;
 import net.minecraft.nbt.NBTTagCompound;

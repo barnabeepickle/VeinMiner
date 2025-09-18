@@ -15,7 +15,7 @@
  *    If not, see <http://www.gnu.org/licenses/>.
  */
 
-package portablejim.veinminer.core;
+package com.github.barnabeepickle.veinminer.core;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
@@ -26,8 +26,8 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import portablejim.veinminer.server.MinerServer;
-import portablejim.veinminer.api.Point;
+import com.github.barnabeepickle.veinminer.server.MinerServer;
+import com.github.barnabeepickle.veinminer.api.Point;
 
 /**
  * Hooks into the entity that are dropped into the world to stop entities that

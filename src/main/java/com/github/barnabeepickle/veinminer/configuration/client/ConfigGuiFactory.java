@@ -15,7 +15,7 @@
  *    If not, see <http://www.gnu.org/licenses/>.
  */
 
-package portablejim.veinminer.configuration.client;
+package com.github.barnabeepickle.veinminer.configuration.client;
 
 import net.minecraftforge.fml.client.IModGuiFactory;
 import net.minecraft.client.Minecraft;

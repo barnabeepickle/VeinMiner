@@ -15,7 +15,7 @@
  *    If not, see <http://www.gnu.org/licenses/>.
  */
 
-package portablejim.veinminer.configuration.client.elements;
+package com.github.barnabeepickle.veinminer.configuration.client.elements;
 
 import net.minecraft.client.gui.GuiButton;
 

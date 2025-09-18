@@ -15,7 +15,7 @@
  *    If not, see <http://www.gnu.org/licenses/>.
  */
 
-package portablejim.veinminer.util;
+package com.github.barnabeepickle.veinminer.util;
 
 /**
  * Basic enum to store the current mode that the player is in.

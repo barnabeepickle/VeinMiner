@@ -1,4 +1,4 @@
-package portablejim.veinminer.core;
+package com.github.barnabeepickle.veinminer.core;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -6,13 +6,13 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import portablejim.veinminer.VeinMiner;
-import portablejim.veinminer.api.VeinminerInitalToolCheck;
-import portablejim.veinminer.configuration.ConfigurationSettings;
-import portablejim.veinminer.server.MinerServer;
-import portablejim.veinminer.util.BlockID;
-import portablejim.veinminer.util.Compatibility;
-import portablejim.veinminer.api.Point;
+import com.github.barnabeepickle.veinminer.VeinMiner;
+import com.github.barnabeepickle.veinminer.api.VeinminerInitalToolCheck;
+import com.github.barnabeepickle.veinminer.configuration.ConfigurationSettings;
+import com.github.barnabeepickle.veinminer.server.MinerServer;
+import com.github.barnabeepickle.veinminer.util.BlockID;
+import com.github.barnabeepickle.veinminer.util.Compatibility;
+import com.github.barnabeepickle.veinminer.api.Point;
 
 /**
  * Created by james on 27/05/16.

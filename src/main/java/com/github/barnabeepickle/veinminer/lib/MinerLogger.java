@@ -15,7 +15,7 @@
  *    If not, see <http://www.gnu.org/licenses/>.
  */
 
-package portablejim.veinminer.lib;
+package com.github.barnabeepickle.veinminer.lib;
 
 import org.apache.logging.log4j.LogManager;
 

@@ -15,7 +15,7 @@
  *    If not, see <http://www.gnu.org/licenses/>.
  */
 
-package portablejim.veinminer.network;
+package com.github.barnabeepickle.veinminer.network;
 
 import io.netty.buffer.ByteBuf;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -23,10 +23,10 @@ import net.minecraft.util.text.TextComponentTranslation;
 import portablejim.veinminer.VeinMiner;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
-import portablejim.veinminer.lib.MinerLogger;
-import portablejim.veinminer.server.MinerServer;
-import portablejim.veinminer.util.PlayerStatus;
-import portablejim.veinminer.util.PreferredMode;
+import com.github.barnabeepickle.veinminer.lib.MinerLogger;
+import com.github.barnabeepickle.veinminer.server.MinerServer;
+import com.github.barnabeepickle.veinminer.util.PlayerStatus;
+import com.github.barnabeepickle.veinminer.util.PreferredMode;
 
 import java.util.UUID;
 

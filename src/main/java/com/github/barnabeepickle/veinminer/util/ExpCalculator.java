@@ -1,4 +1,4 @@
-package portablejim.veinminer.util;
+package com.github.barnabeepickle.veinminer.util;
 
 /**
  * Class to calculate exp values.

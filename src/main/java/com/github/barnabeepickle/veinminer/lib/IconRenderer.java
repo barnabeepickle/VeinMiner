@@ -15,7 +15,7 @@
  *    If not, see <http://www.gnu.org/licenses/>.
  */
 
-package portablejim.veinminer.lib;
+package com.github.barnabeepickle.veinminer.lib;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;

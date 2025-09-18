@@ -15,7 +15,7 @@
  *    If not, see <http://www.gnu.org/licenses/>.
  */
 
-package portablejim.veinminer.configuration.client.elements;
+package com.github.barnabeepickle.veinminer.configuration.client.elements;
 
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.client.GuiScrollingList;
@@ -24,10 +24,10 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import portablejim.veinminer.configuration.client.ConfigGuiScreen;
-import portablejim.veinminer.configuration.client.ToolDisplay;
-import portablejim.veinminer.lib.IconRenderer;
-import portablejim.veinminer.util.BlockID;
+import com.github.barnabeepickle.veinminer.configuration.client.ConfigGuiScreen;
+import com.github.barnabeepickle.veinminer.configuration.client.ToolDisplay;
+import com.github.barnabeepickle.veinminer.lib.IconRenderer;
+import com.github.barnabeepickle.veinminer.util.BlockID;
 
 import java.util.ArrayList;
 

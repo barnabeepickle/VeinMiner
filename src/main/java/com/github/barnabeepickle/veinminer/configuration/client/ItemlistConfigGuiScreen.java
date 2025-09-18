@@ -15,7 +15,7 @@
  *    If not, see <http://www.gnu.org/licenses/>.
  */
 
-package portablejim.veinminer.configuration.client;
+package com.github.barnabeepickle.veinminer.configuration.client;
 
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.client.FMLClientHandler;
@@ -29,10 +29,10 @@ import net.minecraft.client.resources.I18n;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import org.apache.commons.lang3.StringUtils;
-import portablejim.veinminer.VeinMiner;
-import portablejim.veinminer.configuration.client.elements.GuiElementSlotItemlist;
-import portablejim.veinminer.lib.IconRenderer;
-import portablejim.veinminer.util.BlockID;
+import com.github.barnabeepickle.veinminer.VeinMiner;
+import com.github.barnabeepickle.veinminer.configuration.client.elements.GuiElementSlotItemlist;
+import com.github.barnabeepickle.veinminer.lib.IconRenderer;
+import com.github.barnabeepickle.veinminer.util.BlockID;
 
 import java.io.IOException;
 import java.util.ArrayList;

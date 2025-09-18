@@ -15,7 +15,7 @@
  *    If not, see <http://www.gnu.org/licenses/>.
  */
 
-package portablejim.veinminer.server;
+package com.github.barnabeepickle.veinminer.server;
 
 /**
  * Allow MinerCommand to work with multiple types of sender

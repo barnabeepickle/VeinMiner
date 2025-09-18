@@ -15,17 +15,17 @@
  *    If not, see <http://www.gnu.org/licenses/>.
  */
 
-package portablejim.veinminer.server;
+package com.github.barnabeepickle.veinminer.server;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
-import portablejim.veinminer.configuration.ConfigurationSettings;
-import portablejim.veinminer.configuration.ConfigurationValues;
-import portablejim.veinminer.core.MinerInstance;
-import portablejim.veinminer.util.PlayerStatus;
-import portablejim.veinminer.api.Point;
+import com.github.barnabeepickle.veinminer.configuration.ConfigurationSettings;
+import com.github.barnabeepickle.veinminer.configuration.ConfigurationValues;
+import com.github.barnabeepickle.veinminer.core.MinerInstance;
+import com.github.barnabeepickle.veinminer.util.PlayerStatus;
+import com.github.barnabeepickle.veinminer.api.Point;
 
 import java.util.Collections;
 import java.util.HashSet;

@@ -15,7 +15,7 @@
  *    If not, see <http://www.gnu.org/licenses/>.
  */
 
-package portablejim.veinminer.core;
+package com.github.barnabeepickle.veinminer.core;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
@@ -35,19 +35,19 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.ServerTickEvent;
-import portablejim.veinminer.api.Permission;
-import portablejim.veinminer.api.VeinminerHarvestFailedCheck;
-import portablejim.veinminer.api.VeinminerNoToolCheck;
-import portablejim.veinminer.api.VeinminerPostUseTool;
-import portablejim.veinminer.configuration.ConfigurationSettings;
-import portablejim.veinminer.lib.BlockLib;
-import portablejim.veinminer.lib.MinerLogger;
-import portablejim.veinminer.server.MinerServer;
-import portablejim.veinminer.util.BlockID;
-import portablejim.veinminer.util.ExpCalculator;
-import portablejim.veinminer.util.ItemStackID;
-import portablejim.veinminer.util.PlayerStatus;
-import portablejim.veinminer.api.Point;
+import com.github.barnabeepickle.veinminer.api.Permission;
+import com.github.barnabeepickle.veinminer.api.VeinminerHarvestFailedCheck;
+import com.github.barnabeepickle.veinminer.api.VeinminerNoToolCheck;
+import com.github.barnabeepickle.veinminer.api.VeinminerPostUseTool;
+import com.github.barnabeepickle.veinminer.configuration.ConfigurationSettings;
+import com.github.barnabeepickle.veinminer.lib.BlockLib;
+import com.github.barnabeepickle.veinminer.lib.MinerLogger;
+import com.github.barnabeepickle.veinminer.server.MinerServer;
+import com.github.barnabeepickle.veinminer.util.BlockID;
+import com.github.barnabeepickle.veinminer.util.ExpCalculator;
+import com.github.barnabeepickle.veinminer.util.ItemStackID;
+import com.github.barnabeepickle.veinminer.util.PlayerStatus;
+import com.github.barnabeepickle.veinminer.api.Point;
 
 import java.util.ArrayList;
 import java.util.Collections;

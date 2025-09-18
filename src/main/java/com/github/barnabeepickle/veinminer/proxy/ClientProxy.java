@@ -15,11 +15,11 @@
  *    If not, see <http://www.gnu.org/licenses/>.
  */
 
-package portablejim.veinminer.proxy;
+package com.github.barnabeepickle.veinminer.proxy;
 
 import net.minecraftforge.client.ClientCommandHandler;
-import portablejim.veinminer.client.ClientCommand;
-import portablejim.veinminer.event.client.ActivateMinerKeybindManager;
+import com.github.barnabeepickle.veinminer.client.ClientCommand;
+import com.github.barnabeepickle.veinminer.event.client.ActivateMinerKeybindManager;
 
 /**
  * Client side implementation of proxy interface.

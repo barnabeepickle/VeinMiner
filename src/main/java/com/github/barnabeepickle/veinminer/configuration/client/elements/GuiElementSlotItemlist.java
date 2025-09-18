@@ -27,9 +27,9 @@ import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import portablejim.veinminer.configuration.client.ItemlistConfigGuiScreen;
-import portablejim.veinminer.lib.IconRenderer;
-import portablejim.veinminer.util.BlockID;
+import com.github.barnabeepickle.veinminer.configuration.client.ItemlistConfigGuiScreen;
+import com.github.barnabeepickle.veinminer.lib.IconRenderer;
+import com.github.barnabeepickle.veinminer.util.BlockID;
 
 import java.util.ArrayList;
 

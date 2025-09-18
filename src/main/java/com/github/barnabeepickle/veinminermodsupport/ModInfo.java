@@ -15,7 +15,7 @@
  *    If not, see <http://www.gnu.org/licenses/>.
  */
 
-package portablejim.veinminermodsupport;
+package com.github.barnabeepickle.veinminermodsupport;
 
 /**
  * Class to store various constants relating to VeinMiner Mod Support.

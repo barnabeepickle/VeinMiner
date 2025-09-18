@@ -1,7 +1,7 @@
-package portablejim.veinminer.configuration;
+package com.github.barnabeepickle.veinminer.configuration;
 
-import portablejim.veinminer.configuration.json.ToolStruct;
-import portablejim.veinminer.util.BlockID;
+import com.github.barnabeepickle.veinminer.configuration.json.ToolStruct;
+import com.github.barnabeepickle.veinminer.util.BlockID;
 
 import java.util.Collections;
 import java.util.HashSet;

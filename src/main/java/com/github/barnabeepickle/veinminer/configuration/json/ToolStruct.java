@@ -1,4 +1,4 @@
-package portablejim.veinminer.configuration.json;
+package com.github.barnabeepickle.veinminer.configuration.json;
 
 /**
  * Definition class to use with JSON tool configs.

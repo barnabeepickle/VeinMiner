@@ -15,7 +15,7 @@
  *    If not, see <http://www.gnu.org/licenses/>.
  */
 
-package portablejim.veinminer.configuration;
+package com.github.barnabeepickle.veinminer.configuration;
 
 /**
  * The types of tools that Veinminer knows about.

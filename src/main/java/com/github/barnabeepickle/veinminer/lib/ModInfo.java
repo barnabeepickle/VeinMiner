@@ -15,7 +15,7 @@
  *    If not, see <http://www.gnu.org/licenses/>.
  */
 
-package portablejim.veinminer.lib;
+package com.github.barnabeepickle.veinminer.lib;
 
 /**
  * Class to store various constants relating to VeinMiner.

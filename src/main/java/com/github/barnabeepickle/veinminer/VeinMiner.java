@@ -15,7 +15,7 @@
  *    If not, see <http://www.gnu.org/licenses/>.
  */
 
-package portablejim.veinminer;
+package com.github.barnabeepickle.veinminer;
 
 import net.minecraft.block.Block;
 import net.minecraft.command.ServerCommandManager;
@@ -44,21 +44,21 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.oredict.OreDictionary;
 import org.apache.logging.log4j.Logger;
-import portablejim.veinminer.configuration.ConfigurationSettings;
-import portablejim.veinminer.configuration.ConfigurationValues;
-import portablejim.veinminer.configuration.ToolType;
-import portablejim.veinminer.core.CoreEvents;
-import portablejim.veinminer.lib.MinerLogger;
-import portablejim.veinminer.lib.ModInfo;
-import portablejim.veinminer.network.PacketChangeMode;
-import portablejim.veinminer.network.PacketClientPresent;
-import portablejim.veinminer.network.PacketMinerActivate;
-import portablejim.veinminer.network.PacketPingClient;
-import portablejim.veinminer.proxy.CommonProxy;
-import portablejim.veinminer.server.MinerCommand;
-import portablejim.veinminer.server.MinerServer;
-import portablejim.veinminer.util.BlockID;
-import portablejim.veinminer.util.PreferredMode;
+import com.github.barnabeepickle.veinminer.configuration.ConfigurationSettings;
+import com.github.barnabeepickle.veinminer.configuration.ConfigurationValues;
+import com.github.barnabeepickle.veinminer.configuration.ToolType;
+import com.github.barnabeepickle.veinminer.core.CoreEvents;
+import com.github.barnabeepickle.veinminer.lib.MinerLogger;
+import com.github.barnabeepickle.veinminer.lib.ModInfo;
+import com.github.barnabeepickle.veinminer.network.PacketChangeMode;
+import com.github.barnabeepickle.veinminer.network.PacketClientPresent;
+import com.github.barnabeepickle.veinminer.network.PacketMinerActivate;
+import com.github.barnabeepickle.veinminer.network.PacketPingClient;
+import com.github.barnabeepickle.veinminer.proxy.CommonProxy;
+import com.github.barnabeepickle.veinminer.server.MinerCommand;
+import com.github.barnabeepickle.veinminer.server.MinerServer;
+import com.github.barnabeepickle.veinminer.util.BlockID;
+import com.github.barnabeepickle.veinminer.util.PreferredMode;
 
 import java.io.File;
 import java.util.List;

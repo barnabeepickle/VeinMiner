@@ -1,4 +1,4 @@
-package portablejim.veinminermodsupport;
+package com.github.barnabeepickle.veinminermodsupport;
 
 class Lists {
     static class Tools {

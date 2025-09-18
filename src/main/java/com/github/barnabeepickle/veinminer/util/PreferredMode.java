@@ -15,7 +15,7 @@
  *    If not, see <http://www.gnu.org/licenses/>.
  */
 
-package portablejim.veinminer.util;
+package com.github.barnabeepickle.veinminer.util;
 
 /**
  * Simple enum to provide easy reading of the client preferred modes.
